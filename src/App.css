@@ -28,6 +28,76 @@
   color: #61dafb;
 }
 
+.float-left{
+  float: left;
+}
+.float-right{
+  float: right;
+}
+.prod-name{
+  font-size: 20px;
+  font-weight: bold;
+}
+.price{
+  font-size: 20px;
+  font-weight: bold;
+}
+.text-right{
+  text-align: right;
+}
+.mt-5{
+  margin:5px !important;
+}
+.pointer{
+  cursor: pointer;
+}
+.mt-30{
+  margin:30px !important;
+}
+.wd-100{
+  width:100% !important;
+}
+.mt-20{
+  margin-top:10px !important;
+}
+.home-segment{
+  background-color:#e5f9f8 !important;
+  height: 85vh !important;
+}
+.top-bar{
+  background-color:#e5f9f8 !important;
+}
+.ml-20{
+  margin-left:20px !important;
+}
+.ml-130{
+  margin-left:-130px !important;
+}
+.pt-11{
+  padding-top:11px !important;
+}
+.mb-0{
+  margin-bottom:0px !important;
+}
+.width-50p{
+  width:50% !important;
+}
+.width-70p{
+  width:70% !important;
+}
+.inline-block{
+  display: inline-block;
+}
+.width-30p{
+  width:30% !important;
+}
+.widht-90{
+  width:90% !important;
+}
+.height20{
+  max-height: 20px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
