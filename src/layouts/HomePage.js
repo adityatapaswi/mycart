@@ -10,7 +10,6 @@ class HomePage extends React.Component {
         this.state = {
         }
     }
-
     render() {
         return (
             <div>

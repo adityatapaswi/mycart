@@ -24,7 +24,7 @@ class TopBar extends React.Component {
                     link: '/products/all',
                 }
             ],
-            cartCount: JSON.parse(localStorage.getItem('cartProducts')).length
+            cartCount: 0,
         }
 
 
@@ -37,6 +37,12 @@ class TopBar extends React.Component {
     }
     timer = null;
     componentDidMount() {
+        let products = JSON.parse(localStorage.getItem('cartProducts'));
+        if (!products) {
+            localStorage.setItem('cartProducts', "[]")
+        } else {
+            this.setState({ cartCount: JSON.parse(localStorage.getItem('cartProducts')).length })
+        }
         if (this.props.watchCart)
             this.timer = setInterval(() => {
                 this.setState({ cartCount: JSON.parse(localStorage.getItem('cartProducts')).length })
@@ -52,7 +58,7 @@ class TopBar extends React.Component {
         const { activeItem, menuItems, cartCount } = this.state
         return (
             <Segment className="mb-0 top-bar">
-                <Image size='tiny' className="pointer" floated='left' onClick={() =>    this.props.history.push('/home')} src={logo}></Image>
+                <Image size='tiny' className="pointer" floated='left' onClick={() => this.props.history.push('/home')} src={logo}></Image>
                 <Menu secondary>
                     {
                         menuItems.map((item, idx) => {
